@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 34vw;
+    padding-top: 20px;
+}
+.container 
+h1{
+    font-size: 50px;
+    font-weight: 200;
+    color: rgb(34, 34, 34);
+
+}
+form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+form input{
+    border: none;
+    padding: 0px 10px;
+    height: 45px;
+    width: 300px;
+    outline: none;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 2px 10px 15px 2px rgba(0,0,0,0.1);
+    
+
+}
+ul{
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0;
+    height: auto;
+    position: relative;
+    overflow-y: auto;
+}
+
+ul li input{
+    height: 20px;
+    font-size: 20px;
+    margin-left:  20px;
+    width: 20px;
+    border: none;
+   
+    
+
+}
+ul li{
+    background-color: #dbdbdb;
+    display: flex;
+    justify-content: space-between;
+    width: 32vw;
+    height: auto;
+    align-items: center;
+    padding: 5px 0px;
+    border-radius: 20px;
+    margin-top: 10px;
+    transition: 0.4s ease;
+    
+    
+}
+
+
+ul li:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+
+.deleteBtn {
+    background-color: red;
+    font-weight: 20px;
+    border: none;
+    color: white;
+    height: 40px;
+    width: 70px;
+    
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.deleteBtn:hover{
+    background-color: darkred;
+}
+
+.editBtn {
+    background-color: rgb(51, 236, 150);
+    font-weight: 20px;
+    border: none;
+    color: white;
+    height: 40px;
+    width: 70px;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-family: "Poppins", sans-serif;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.editBtn:hover{
+background-color: rgb(0, 138, 23);
+}
+
+
+form button{
+    width: 90px;
+    height: 45px;
+    font-size: 15px;
+    border-radius: 7px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    transition: 0.3s ease-in-out;
+}
+form button:hover{
+    background-color: darkblue;
+}
+
+ .textSpace{
+    font-size: 15px;
+    width: 15vw;
+    height: 100%;
+    transition: 0.4s ease-in-out;
+   
+    
+}
+
+
+.text-overflow{
+    text-overflow: ellipsis;
+    overflow: hidden !important;
+} 
+
+
+.listItem .textSpace{
+    transition: 0.4s ease-in-out;
+}
+
+
+ .listItem:hover .textSpace{
+    font-size: 15px;
+    width: 15vw;
+    height: auto;
+    word-wrap: break-word;
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+.textSpace p{
+
+    text-overflow: ellipsis;
+   
+    
+}
+
+ .listItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 5bvh;
+    overflow-y: auto;
+    
+    width: auto;
+    transition: 0.4s ease-in-out;
+    
+ }
+ 
+
+
+ @media only screen and (max-width: 768px) {
+    
+    .container {
+      width: 100vw;
+      padding: 0 0px;
+      
+    }
+    .listItems{
+        width: 100vw;
+    }
+    .listItem{
+        width: 90vw;
+    }
+  }
+
+
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.details .tile1,.tile2{
+   
+    color: rgb(56, 56, 56);
+    height: 20vh;
+    width: 20vw;
+    margin: 20px 20px;
+    padding: 15px;
+    border-radius: 21px;
+    background: linear-gradient(145deg, #ebebeb, #f0f0f0);
+    box-shadow:  5px 5px 8px #c9c9c9,
+                 -5px -5px 8px #ffffff;
+}
+
+
+.deleteAllBtn{
+    margin-left: 20px;
+    background-color: red;
+    width: 9vw;
+}
+.deleteAllBtn:hover{
+    background-color: darkred;
+}
+ 
+
+
+
+/* BlankInput.jsx CSS */
+.pop-up-container{
+    top: 0%;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    
+    
+}
+
+.pop-up{
+    padding: 20px;
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+    background-color: #e0e0e0;
+   
+    text-align: center;
+}
+
+
+.pop-up input{
+    border: none;
+    padding: 0px 10px;
+    height: 45px;
+    width: 300px;
+    outline: none;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 2px 10px 15px 2px rgba(0,0,0,0.1);
+}
+
+.pop-up button{
+    background-color: rgb(51, 236, 150);
+    font-weight: 20px;
+    border: none;
+    color: white;
+    height: 45px;
+    width: 70px;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-family: "Poppins", sans-serif;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
