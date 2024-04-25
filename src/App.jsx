@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css'
 import BlankInput from './Components/BlankInput';
 import './Firebase Setup/Firebase'
-import { addDoc, collection, deleteDoc, doc, onSnapshot, updateDoc } from 'firebase/firestore';
+import { addDoc, collection, deleteDoc, doc, onSnapshot, updateDoc, getDocs } from 'firebase/firestore';
 import { db } from './Firebase Setup/Firebase';
 
 function App() {
@@ -43,12 +43,20 @@ function App() {
   };
 
   const deleteAll = async () => {
-    const batch = db.batch();
-    listItem.forEach((item) => {
-      const docRef = doc(db, 'todos');
-      batch.delete(docRef);
-    });
-    await batch.commit();
+    try {
+      const todosRef = collection(db, 'todos');
+      const snapshot = await getDocs(todosRef);
+    
+      snapshot.forEach(async (doc) => {
+        try {
+          await deleteDoc(doc.ref);
+        } catch (error) {
+          console.error(`Error deleting document with ID ${doc.id}:`, error);
+        }
+      });
+    } catch (error) {
+      console.error('Error fetching documents:', error);
+    }
   };
 
   const toggleComplete = async (index) => {
